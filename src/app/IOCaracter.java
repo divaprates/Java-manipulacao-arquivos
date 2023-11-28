@@ -9,7 +9,8 @@ public class IOCaracter {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String line = br.readLine();
 
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        File f = new File("recomentacoes.txt");
+        BufferedWriter bw = new BufferedWriter(new FileWriter(f.getName()));
 
         do {
             bw.write(line);
