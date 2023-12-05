@@ -5,7 +5,7 @@ import java.io.*;
 public class IOCaracter {
 
     public static void receiveKeyboard() throws IOException {
-        System.out.println("Recommend 3 films: ");
+        System.out.println("Recommend films: ");
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String line = br.readLine();
 
@@ -49,12 +49,12 @@ public class IOCaracter {
 
         System.out.println("Arquivo copiado com Sucesso!");
 
-        System.out.println("Digite mais 3 filmes: ");
         addNewKeyboard(fcopy.getName());
     }
 
     private static void addNewKeyboard(String file) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader((System.in)));
+        System.out.println("Recommend new films: ");
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String line = br.readLine();
 
         BufferedWriter bw = new BufferedWriter(new FileWriter(file, true));
