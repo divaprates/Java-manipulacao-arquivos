@@ -18,6 +18,8 @@ public class Main {
         } catch (IOException e) {
             System.err.println("Algo deu errado...");
             throw new RuntimeException(e);
+        } finally {
+            System.out.println("Finalizado!!");
         }
 
     }

@@ -48,6 +48,26 @@ public class IOCaracter {
         bw.close();
 
         System.out.println("Arquivo copiado com Sucesso!");
+
+        System.out.println("Digite mais 3 filmes: ");
+        addNewKeyboard(fcopy.getName());
+    }
+
+    private static void addNewKeyboard(String file) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader((System.in)));
+        String line = br.readLine();
+
+        BufferedWriter bw = new BufferedWriter(new FileWriter(file, true));
+
+        do {
+            bw.write(line);
+            bw.newLine();
+            line = br.readLine();
+        } while(!line.equalsIgnoreCase("fim"));
+
+        bw.flush();
+        br.close();
+        bw.close();
     }
 
 }
