@@ -1,3 +1,4 @@
+import app.IOBytes;
 import app.IOCaracter;
 
 import java.io.BufferedReader;
@@ -32,6 +33,13 @@ public class Main {
                     System.out.println("Finalizado!!");
                 }
                 break;
+            case "3":
+                try {
+                    IOBytes.copyFile();
+                } catch (IOException e) {
+                    System.err.println("Algo deu errado...");
+                    throw new RuntimeException(e);
+                }
             default:
                 System.out.println("The end...");
         }

@@ -9,7 +9,7 @@ public class IOCaracter {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String line = br.readLine();
 
-        File f = new File("recomentacoes.txt");
+        File f = new File("recomendacoes.txt");
         BufferedWriter bw = new BufferedWriter(new FileWriter(f.getName()));
 
         do {
@@ -25,7 +25,7 @@ public class IOCaracter {
     }
 
     public static void copyFile() throws IOException {
-        File f = new File("recomentacoes.txt");
+        File f = new File("recomendacoes.txt");
         String nameFile = f.getName();
 
         BufferedReader br = new BufferedReader(new FileReader(nameFile));
