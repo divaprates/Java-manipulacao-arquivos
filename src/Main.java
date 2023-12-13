@@ -1,5 +1,6 @@
 import app.IOBytes;
 import app.IOCaracter;
+import app.IOData;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -36,6 +37,13 @@ public class Main {
             case "3":
                 try {
                     IOBytes.copyFile();
+                } catch (IOException e) {
+                    System.err.println("Algo deu errado...");
+                    throw new RuntimeException(e);
+                }
+            case "4":
+                try {
+                    IOData.incluirProduto();
                 } catch (IOException e) {
                     System.err.println("Algo deu errado...");
                     throw new RuntimeException(e);
