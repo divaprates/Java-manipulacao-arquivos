@@ -31,13 +31,29 @@ public class IOData {
         double price = scan.nextDouble();
         dos.writeDouble(price);
 
+        readProduct(f.getPath());
+
         dos.close();
         scan.close();
+        ps.close();
 
     }
 
-    public static void readProduct(String arquivo) {
+    public static void readProduct(String arquivo) throws IOException {
+        File f = new File(arquivo);
+        DataInputStream dis = new DataInputStream(new FileInputStream(f.getPath()));
 
+        String name = dis.readUTF();
+        char type = dis.readChar();
+        int amount = dis.readInt();
+        double price = dis.readDouble();
+
+        System.out.println("name: " + name + "\n"
+                         + "type: " + type + "\n"
+                         + "amount: " + amount + "\n"
+                         + "price: " + price);
+
+        dis.close();
     }
 
 }
