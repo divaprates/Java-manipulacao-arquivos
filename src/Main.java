@@ -1,6 +1,7 @@
 import app.IOBytes;
 import app.IOCaracter;
 import app.IOData;
+import app.IOObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -48,6 +49,8 @@ public class Main {
                     System.err.println("Algo deu errado...");
                     throw new RuntimeException(e);
                 }
+            case "5":
+                IOObject.serializableObject();
             default:
                 System.out.println("The end...");
         }
