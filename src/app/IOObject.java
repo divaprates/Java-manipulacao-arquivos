@@ -27,4 +27,16 @@ public class IOObject {
             }
         }
     }
+
+    public static void deserializableObject(String file) throws IOException, ClassNotFoundException {
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file));
+        Cat cat = (Cat) ois.readObject();
+
+        System.out.printf("\nNome..................: %s\n", cat.getName());
+        System.out.printf("Cor................: %s\n", cat.getColor());
+        System.out.printf("Idade...................: %d\n", cat.getAge());
+        System.out.println(cat);
+
+        ois.close();
+    }
 }

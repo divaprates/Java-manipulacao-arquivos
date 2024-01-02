@@ -12,4 +12,25 @@ public class Cat implements Serializable {
         this.color = color;
         this.age = age;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    @Override
+    public String toString() {
+        return "Cat{" +
+                "name='" + name + '\'' +
+                ", color='" + color + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }
