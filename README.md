@@ -1,10 +1,10 @@
 # Java: manipulacao de arquivos
 - Estudo sobre manipulação de arquivos em **Java**
 
-- I/O de Bytes
-- I/O de Caracter
-- I/O de Data
-- I/O de Object
+- I/O Bytes
+- I/O Caracter
+- I/O Data
+- I/O Object
 
 ##
 com a [cami-la](https://github.com/cami-la) - DIO
